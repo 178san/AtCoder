@@ -1,0 +1,11 @@
+<?php
+//gcd lcm
+
+function gcd($x,$y){
+	return($x%$y)?gcd($y,$x%$y):$y;
+}
+
+function lcm($x,$y){
+	return $x/gcd($x,$y)*$y;
+}
+
