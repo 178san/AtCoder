@@ -1,11 +1,15 @@
 <?php
 //gcd lcm
+//gmp_gcdが使えるなら、その方が良さそう
 
-function gcd($x,$y){
-	return($x%$y)?gcd($y,$x%$y):$y;
+function gcd($a,$b){
+	return $b?gcd($b,$a%$b):$a;
 }
 
-function lcm($x,$y){
-	return $x/gcd($x,$y)*$y;
+function lcm($a,$b){
+	return $a/gcd($a,$b)*$b;
 }
 
+//ext_gcd 分かったら追加する
+function ext_gcd($a,$b){
+	return $b? :
